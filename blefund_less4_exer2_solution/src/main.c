@@ -14,6 +14,8 @@
 #include "my_lbs.h"
 #include "adc.h"
 #include "adc.c"
+#include <math.h>
+#include <stdio.h>
 
 static struct bt_le_adv_param *adv_param = BT_LE_ADV_PARAM(
 	(BT_LE_ADV_OPT_CONNECTABLE |
@@ -39,6 +41,7 @@ LOG_MODULE_REGISTER(Lesson4_Exercise2, LOG_LEVEL_INF);
 /* STEP 17 - Define the interval at which you want to send data at */
 #define NOTIFY_INTERVAL 500
 static bool app_button_state;
+
 /* STEP 15 - Define the data you want to stream over Bluetooth LE */
 /*static uint32_t app_sensor_value_x = 100;
 static uint32_t app_sensor_value_y = 100;
@@ -83,7 +86,13 @@ static bool app_button_cb(void)
 	return app_button_state;
 }
 
+
+
+
 /* STEP 18.1 - Define the thread function  */
+
+
+
 void send_data_thread(void)
 {
 	int err;
@@ -106,9 +115,12 @@ void send_data_thread(void)
 		/* Send notification, the function sends notifications only if a client is subscribed */
 		
 		struct Measurement m = readADCValue();
-		my_lbs_send_sensor_notify_x(m.x);
-		my_lbs_send_sensor_notify_y(m.y);
-		my_lbs_send_sensor_notify_z(m.z);
+		my_lbs_send_sensor_notify(m.x);
+		my_lbs_send_sensor_notify(m.y);
+		my_lbs_send_sensor_notify(m.z);
+
+		//send_determine_direction(determine_direction());
+
 		
 
 		

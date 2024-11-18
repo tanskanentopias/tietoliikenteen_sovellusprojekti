@@ -134,3 +134,49 @@ struct Measurement readADCValue(void)
 	}
     return m;
 }
+
+char determine_direction() {
+    // Structure to hold the measurement
+    struct Measurement m = readADCValue();
+
+    // Notify raw sensor values
+    my_lbs_send_sensor_notify(m.x);
+    my_lbs_send_sensor_notify(m.y);
+    my_lbs_send_sensor_notify(m.z);
+
+    // Variable to store direction
+    char suunta;
+
+    // Find the dominant axis
+    float abs_x = fabs(m.x);
+    float abs_y = fabs(m.y);
+    float abs_z = fabs(m.z);
+
+    if (abs_x > abs_y && abs_x > abs_z) {
+        if (m.x > 0) {
+            suunta = 'y'; // Positive X
+            my_lbs_send_sensor_notify(1);
+        } else {
+            suunta = 'a'; // Negative X
+            my_lbs_send_sensor_notify(-1);
+        }
+    } else if (abs_y > abs_x && abs_y > abs_z) {
+        if (m.y > 0) {
+            suunta = 'o'; // Positive Y
+            my_lbs_send_sensor_notify(2);
+        } else {
+            suunta = 'v'; // Negative Y
+            my_lbs_send_sensor_notify(-2);
+        }
+    } else {
+        if (m.z > 0) {
+            suunta = 'j'; // Positive Z
+            my_lbs_send_sensor_notify(3);
+        } else {
+            suunta = 'i'; // Negative Z
+            my_lbs_send_sensor_notify(-3);
+        }
+    }
+
+    return suunta; // Return the direction as a single character
+}

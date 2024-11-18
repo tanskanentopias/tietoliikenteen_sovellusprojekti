@@ -27,6 +27,7 @@
 LOG_MODULE_DECLARE(Lesson4_Exercise2);
 
 static bool notify_mysensor_enabled;
+static bool notify_mydirection_enabled;
 static bool indicate_enabled;
 static bool button_state;
 static struct my_lbs_cb lbs_cb;
@@ -144,29 +145,20 @@ int my_lbs_send_button_state_indicate(bool button_state)
 
 /* STEP 14 - Define the function to send notifications for the MYSENSOR characteristic */
 
-int my_lbs_send_sensor_notify_x(int sensor_value_x)
+uint16_t my_lbs_send_sensor_notify(uint16_t sensor_value)
 {
 	if (!notify_mysensor_enabled) {
 		return -EACCES;
 	}
 
-	return bt_gatt_notify(NULL, &my_lbs_svc.attrs[7], &sensor_value_x, sizeof(sensor_value_x));
+	return bt_gatt_notify(NULL, &my_lbs_svc.attrs[7], &sensor_value, sizeof(sensor_value));
 }
 
-int my_lbs_send_sensor_notify_y(int sensor_value_y)
+char send_determine_direction(char direction)
 {
-	if (!notify_mysensor_enabled) {
+	if (!notify_mydirection_enabled) {
 		return -EACCES;
 	}
 
-	return bt_gatt_notify(NULL, &my_lbs_svc.attrs[7], &sensor_value_y, sizeof(sensor_value_y));
-}
-
-int my_lbs_send_sensor_notify_z(int sensor_value_z)
-{
-	if (!notify_mysensor_enabled) {
-		return -EACCES;
-	}
-
-	return bt_gatt_notify(NULL, &my_lbs_svc.attrs[7], &sensor_value_z, sizeof(sensor_value_z));
+	return bt_gatt_notify(NULL, &my_lbs_svc.attrs[7], &direction, sizeof(direction));
 }
