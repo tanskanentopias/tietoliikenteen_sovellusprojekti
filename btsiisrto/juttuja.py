@@ -116,8 +116,8 @@ def insert_data_to_db(x, y, z):
     try:
         if conn and conn.is_connected():
             cursor = conn.cursor()
-            sql = "INSERT INTO rawdata (groupid,x, y, z) VALUES (%s, %s, %s)"
-            cursor.execute(sql, (x, y, z))
+            sql = "INSERT INTO rawdata (groupid, from_mac, to_mac ,x, y, z) VALUES ('17',%s,'b8:27:eb:af:7f:ae',%s, %s,%s)"
+            cursor.execute(sql, (DEVICE_ADDRESS,x, y, z))
             conn.commit()
             print(f"Data tallennettu: X={x}, Y={y}, Z={z}")
             cursor.close()
