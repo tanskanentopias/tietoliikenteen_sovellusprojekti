@@ -99,12 +99,11 @@ int my_lbs_send_button_state_notify(bool button_state);
  * of a simulated sensor to all connected peers.
  *
  * @param[in] sensor_value The value of the sensor.
- * @param[in] direction direction of the sensor
  * @retval 0 If the operation was successful.
  *           Otherwise, a (negative) error code is returned.
  */
 uint16_t my_lbs_send_sensor_notify(uint16_t sensor_value);
-char send_determine_direction(char direction);
+
 
 #ifdef __cplusplus
 }

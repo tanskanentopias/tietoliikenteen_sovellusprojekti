@@ -154,11 +154,3 @@ uint16_t my_lbs_send_sensor_notify(uint16_t sensor_value)
 	return bt_gatt_notify(NULL, &my_lbs_svc.attrs[7], &sensor_value, sizeof(sensor_value));
 }
 
-char send_determine_direction(char direction)
-{
-	if (!notify_mydirection_enabled) {
-		return -EACCES;
-	}
-
-	return bt_gatt_notify(NULL, &my_lbs_svc.attrs[7], &direction, sizeof(direction));
-}

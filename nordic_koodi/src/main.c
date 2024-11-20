@@ -58,24 +58,6 @@ static const struct bt_data sd[] = {
 	BT_DATA_BYTES(BT_DATA_UUID128_ALL, BT_UUID_LBS_VAL),
 };
 
-/* STEP 16 - Define a function to simulate the data */
-/*static void simulate_data(void)
-{
-	app_sensor_value_x++;
-	if (app_sensor_value_x == 200) {
-		app_sensor_value_x = 100;
-	}
-
-	app_sensor_value_y++;
-	if (app_sensor_value_y == 200) {
-		app_sensor_value_y = 100;
-	}
-
-	app_sensor_value_z++;
-	if (app_sensor_value_z == 200) {
-		app_sensor_value_z = 100;
-	}
-}*/
 static void app_led_cb(bool led_state)
 {
 	dk_set_led(USER_LED, led_state);
@@ -109,23 +91,17 @@ void send_data_thread(void)
 	return;
 	}
 	while (1) {
-		/* Simulate data */
-		//simulate_data();
-
-		/* Send notification, the function sends notifications only if a client is subscribed */
 		
-		struct Measurement m = readADCValue();
-		my_lbs_send_sensor_notify(m.x);
-		my_lbs_send_sensor_notify(m.y);
-		my_lbs_send_sensor_notify(m.z);
-
-		//send_determine_direction(determine_direction());
-
-		
-
-		
-
+		if(app_button_state){
+	
+			struct Measurement m = readADCValue();
+			my_lbs_send_sensor_notify(m.x);
+			my_lbs_send_sensor_notify(m.y);
+			my_lbs_send_sensor_notify(m.z);
+		}
+			
 		k_sleep(K_MSEC(NOTIFY_INTERVAL));
+		
 	}
 }
 
