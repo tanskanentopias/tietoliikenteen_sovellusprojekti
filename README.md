@@ -22,6 +22,7 @@ Projektin päätavoitteena oli rakentaa toimiva tiedonsiirtojärjestelmä, joka:
 - Vaihe 3: Tietokannan suunnittelu ja yhteyden toteutus palvelimella.
 - Vaihe 4: Testaus, virheenkorjaus ja tekstitiedostojen viimeistely.
 ## Käytetyt Laitteet ja Teknologiat
+![image](https://github.com/user-attachments/assets/1154c2b3-b45e-4d4b-a344-be6c4a75de87)
 - nRF5340 Development Kit (Kuva 1)
 - Raspberry Pi 3 (Kuva 2)
 - GY-61 ADXL335 Kolmiakselinen kiihtyvyysanturi (Kuva 3)
