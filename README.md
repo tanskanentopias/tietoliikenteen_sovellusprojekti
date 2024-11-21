@@ -24,7 +24,9 @@ Projektin päätavoitteena oli rakentaa toimiva tiedonsiirtojärjestelmä, joka:
 ## Käytetyt Laitteet ja Teknologiat
 ![image](https://github.com/user-attachments/assets/1154c2b3-b45e-4d4b-a344-be6c4a75de87)
 - nRF5340 Development Kit (Kuva 1)
+- ![image](https://github.com/user-attachments/assets/8a1605dc-d331-468e-a641-49ff65765393)
 - Raspberry Pi 3 (Kuva 2)
+- ![image](https://github.com/user-attachments/assets/eac1498c-35f9-4b53-ad6c-eb86f3152ad3)
 - GY-61 ADXL335 Kolmiakselinen kiihtyvyysanturi (Kuva 3)
 - Python: Käytettiin ohjelmointikielenä sekä nRF5340:ssä että Raspberry Pi:ssä.
 - MySQL: Palvelimella käytetty tietokanta kiihtyvyysarvojen tallentamiseen.
