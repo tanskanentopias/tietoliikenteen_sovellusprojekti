@@ -27,6 +27,7 @@ Projektin päätavoitteena oli rakentaa toimiva tiedonsiirtojärjestelmä, joka:
 - 
 ![image](https://github.com/user-attachments/assets/8a1605dc-d331-468e-a641-49ff65765393)
 - Raspberry Pi 3 (Kuva 2)
+- 
 ![image](https://github.com/user-attachments/assets/eac1498c-35f9-4b53-ad6c-eb86f3152ad3)
 - GY-61 ADXL335 Kolmiakselinen kiihtyvyysanturi (Kuva 3)
 - Python: Käytettiin ohjelmointikielenä sekä nRF5340:ssä että Raspberry Pi:ssä.
