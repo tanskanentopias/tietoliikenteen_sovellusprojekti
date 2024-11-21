@@ -22,21 +22,23 @@ Projektin päätavoitteena oli rakentaa toimiva tiedonsiirtojärjestelmä, joka:
 - Vaihe 3: Tietokannan suunnittelu ja yhteyden toteutus palvelimella.
 - Vaihe 4: Testaus, virheenkorjaus ja tekstitiedostojen viimeistely.
 ## Käytetyt Laitteet ja Teknologiat
-![image](https://github.com/user-attachments/assets/1154c2b3-b45e-4d4b-a344-be6c4a75de87)
+
 - nRF5340 Development Kit (Kuva 1)
-- 
-![image](https://github.com/user-attachments/assets/8a1605dc-d331-468e-a641-49ff65765393)
 - Raspberry Pi 3 (Kuva 2)
-- 
-![image](https://github.com/user-attachments/assets/eac1498c-35f9-4b53-ad6c-eb86f3152ad3)
 - GY-61 ADXL335 Kolmiakselinen kiihtyvyysanturi (Kuva 3)
 - Python: Käytettiin ohjelmointikielenä sekä nRF5340:ssä että Raspberry Pi:ssä.
 - MySQL: Palvelimella käytetty tietokanta kiihtyvyysarvojen tallentamiseen.
 - Linux-palvelin: Toimi keskeisenä tietokantapalvelimena
+
+ ![image](https://github.com/user-attachments/assets/1154c2b3-b45e-4d4b-a344-be6c4a75de87)
  
 1.	(nRF5340 Development Kit)
+
+ ![image](https://github.com/user-attachments/assets/8a1605dc-d331-468e-a641-49ff65765393)
  
 2.	(Raspberry Pi 3)
+
+![image](https://github.com/user-attachments/assets/eac1498c-35f9-4b53-ad6c-eb86f3152ad3)
  
 3.	(GY-61 ADXL335 3 akselinen kiihtyvyysanturi)
 
@@ -48,7 +50,10 @@ Haasteina olivat:
 - Anturien kalibrointi tarkkojen arvojen saamiseksi.
 - Tietokantayhteyksien optimointi suurille datamäärille.
 ## Laitteiston linkit
-GY-61 Kiihtyvyysanturi
-nRF5340 Developement Kit
-Raspberry Pi 3
+[GY-61 Kiihtyvyysanturi](https://www.spelektroniikka.fi/p23824-gy-61-adxl335-3-akselinen-kiihtyvyysanturi-fi.html)
+
+[nRF5340 Developement Kit](https://www.nordicsemi.com/Products/Development-hardware/nRF5340-DK)
+
+[Raspberry Pi 3](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/)
+
 ## Yhteenveto
