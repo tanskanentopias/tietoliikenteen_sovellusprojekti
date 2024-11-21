@@ -50,7 +50,10 @@ Haasteina olivat:
 - Anturien kalibrointi tarkkojen arvojen saamiseksi.
 - Tietokantayhteyksien optimointi suurille datamäärille.
 ## Laitteiston linkit
-GY-61 Kiihtyvyysanturi
-nRF5340 Developement Kit
-Raspberry Pi 3
+[GY-61 Kiihtyvyysanturi](https://www.spelektroniikka.fi/p23824-gy-61-adxl335-3-akselinen-kiihtyvyysanturi-fi.html)
+
+[nRF5340 Developement Kit](https://www.nordicsemi.com/Products/Development-hardware/nRF5340-DK)
+
+[Raspberry Pi 3](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/)
+
 ## Yhteenveto
