@@ -46,13 +46,18 @@ def data_handler(sender, data):
     global buffer
     if len(data) % 2 == 0:  # Varmistetaan parillinen pituus
         for i in range(0, len(data), 2):
-            value = struct.unpack('<h', data[i:i+2])[0] / 100.0  # Skaalaus
+            value = struct.unpack('<h', data[i:i+2])[0] / 1  # Skaalaus
             buffer.append(value)
 
         while len(buffer) >= 3:  # Kolme arvoa kerrallaan
             x, y, z = buffer[:3]
             buffer = buffer[3:]
             print(f"X: {x:.2f} - Y: {y:.2f} - Z: {z:.2f}")
+
+            '''if(x > y and x>z):
+                {
+                    #suunta demo
+                }'''
             # Tallenna tietokantaan
             insert_data_to_db(x, y, z)
     else:
@@ -60,14 +65,14 @@ def data_handler(sender, data):
 
 async def main():
     """BLE-yhteyden päälogiikka."""
-    await connect_to_db()  # Yhdistä tietokantaan
+    ##await connect_to_db()  # Yhdistä tietokantaan
 
     async with BleakClient(DEVICE_ADDRESS) as client:
         if client.is_connected:
             print("Yhdistetty laitteeseen!")
             await client.start_notify(CHARACTERISTIC_UUID, data_handler)
             print("Odotetaan dataa...")
-            await asyncio.sleep(10)
+            await asyncio.sleep(30)
             await client.stop_notify(CHARACTERISTIC_UUID)
             print("Yhteys lopetettu")
     
