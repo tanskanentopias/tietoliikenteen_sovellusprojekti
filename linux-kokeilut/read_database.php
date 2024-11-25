@@ -1,9 +1,9 @@
 GNU nano 7.2                                                                     read_database.php *                                                                             <?php
-$servername = "172.20.241.42";
-$username = "dbaccess_ro"; // katso discordin pinned-viesteistä
-$password = "1111"; // katso discordin pinned-viesteistä
-$dbname = "measurements";
-$groupid = 17; // oma groupid
+$servername = "";
+$username = ""; // katso discordin pinned-viesteistä
+$password = ""; // katso discordin pinned-viesteistä
+$dbname = "";
+$groupid = 0; // oma groupid
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

@@ -4,6 +4,8 @@ import struct
 from bleak import BleakClient
 import mysql.connector
 from mysql.connector import Error
+from dotenv import load_dotenv
+import os
 
 DEVICE_ADDRESS = "CF:42:16:CF:E2:5F"  # Korvaa BLE-osoitteella
 CHARACTERISTIC_UUID = "00001526-1212-efde-1523-785feabcd123"  # Korvaa UUID:llä
@@ -13,15 +15,22 @@ buffer = []  # Puskurimuuttuja arvoparien keräämiseksi
 # Tietokantayhteys
 conn = None
 
+load_dotenv()
+
+db_host = os.getenv("HOST")
+db_user = os.getenv("USER")
+db_password = os.getenv("PASSWORD")
+db_name = os.getenv("NAME")
+
 async def connect_to_db():
     """Yhdistä tietokantaan ja palauta yhteysobjekti."""
     try:
         global conn
         conn = mysql.connector.connect(
-            host="172.20.241.42",
-            user="dbaccess_rw",
-            password="0000",
-            database="measurements"
+            host=db_host,
+            user=db_user,
+            password=db_password,
+            database=db_name
         )
         if conn.is_connected():
             print("Tietokantayhteys muodostettu.")
