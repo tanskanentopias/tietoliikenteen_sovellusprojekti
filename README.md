@@ -46,7 +46,7 @@ Projektin päätavoitteena oli rakentaa toimiva tiedonsiirtojärjestelmä, joka:
 3.	(GY-61 ADXL335 3 akselinen kiihtyvyysanturi)
 
 ## Oppimiskokemukset ja haasteet
-Projektin aikana opimme laajasti sekä ohjelmoinnin että järjestelmäintegraation käytännön soveltamista. Erityisesti Bluetooth-yhteyden vakauden varmistaminen sekä reaaliaikaisen tiedonkeruun ja tallennuksen yhteensovittaminen toivat arvokasta kokemusta Haastavimmaksi osaksi todistautui koneoppimisen ymmärtäminen ja käyttäminen.
+Projektin aikana opimme laajasti sekä ohjelmoinnin että järjestelmäintegraation käytännön soveltamista. Erityisesti Bluetooth-yhteyden vakauden varmistaminen sekä reaaliaikaisen tiedonkeruun ja tallennuksen yhteensovittaminen toivat arvokasta kokemusta. Haastavimmaksi osaksi paljastui koneoppimisen ymmärtäminen ja käyttäminen.
 
 Haasteina olivat:
 - Bluetooth-yhteyden konfigurointi eri laitteiden välillä.
