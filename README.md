@@ -61,4 +61,4 @@ Haasteina olivat:
 [Raspberry Pi 3](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/)
 
 ## Yhteenveto
-Tietoliikenteen Sovellusprojekti oli haastava ja hyvin taitoja testaava osa lukuvuotta, mutta todella opettavainen monesta eri alueesta alallamme. Projektin aikana saimme viettä monia tunteja ratkaisujen pohtimisessa, sekä eri toteutustapojen ideoimisessa. Vaikka projektin eri osat toivat monia haasteita, nämä haasteen tunteet saivat onnistumiset tuntumaan vain paremmalta.
+Tietoliikenteen Sovellusprojekti oli haastava ja hyvin taitoja testaava osa lukuvuotta, mutta todella opettavainen monesta eri alueesta alallamme. Projektin aikana saimme viettää monia tunteja ratkaisujen pohtimisessa, sekä eri toteutustapojen ideoimisessa. Vaikka projektin eri osat toivat monia haasteita, nämä haasteen tunteet saivat onnistumiset tuntumaan vain paremmalta.
