@@ -8,6 +8,7 @@ Tietoliikenteen sovellusprojekti on osa tieto- ja viestintätekniikan insinöör
 ![Blank document (1)](https://github.com/user-attachments/assets/f0e6158f-fa61-4aba-8872-5d509d09ca10)
 ## Saimme käytännön kokemusta seuraavista aihealueista:
 •	kiihtyvyysantureiden ja kehitysalustojen käyttö
+
 •	Bluetooth-tiedonsiirto ja väliasemien ohjelmointi
 •	palvelin- ja tietokantasovellusten kehittäminen Pythonilla ja MySQL:llä
 •	koodin kirjoitusta koneoppimistarkoitukseen
