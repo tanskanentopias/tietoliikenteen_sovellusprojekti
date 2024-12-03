@@ -10,8 +10,11 @@ Tietoliikenteen sovellusprojekti on osa tieto- ja viestintätekniikan insinöör
 •	kiihtyvyysantureiden ja kehitysalustojen käyttö
 
 •	Bluetooth-tiedonsiirto ja väliasemien ohjelmointi
+
 •	palvelin- ja tietokantasovellusten kehittäminen Pythonilla ja MySQL:llä
+
 •	koodin kirjoitusta koneoppimistarkoitukseen
+
 •	monivaiheisen järjestelmän testaus ja virheenkorjaus.
 
 ## Projektin tavoitteet
