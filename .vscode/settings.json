@@ -1,5 +1,6 @@
 {
     "nrf-connect.applications": [
         "${workspaceFolder}\\blefund_less4_exer2_solution"
-    ]
+    ],
+    "cmake.sourceDirectory": "C:/Users/jimir/OneDrive - University of Oulu and Oamk/24_syksy_projekt/tietoliikenteen_sovellusprojekti/nordic_koodi"
 }
