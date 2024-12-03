@@ -54,7 +54,7 @@ final_centroids, closest_centroids = k_means_clustering(data, initial_centroids)
 print(f"datapoints: {data}")
 print(f"centroids: {initial_centroids}")
 print(f"closests centroids: {closest_centroids}")
-print(f"final centroids: {final_centroids}")
+print(f"final centroids: \n {final_centroids}")
 
 #Plotting 
 fig = plt.figure()
@@ -74,3 +74,19 @@ ax.set_zlabel("Z Axis")
 
 ax.legend()
 plt.show()
+
+with open('python\Keskipisteet.h', mode='w') as file:
+    file.write("int final_centroids[6][3];\n")
+    for i in final_centroids:
+        if (round(i[0], -2) == 1800):
+            file.write(f"final_centroids[0] = {{{i[0]}, {i[1]}, {i[2]}}};\n")
+        elif (round(i[0], -2) == 1200):
+            file.write(f"final_centroids[1] = {{{i[0]}, {i[1]}, {i[2]}}};\n")
+        elif (round(i[1], -2) == 1800):
+            file.write(f"final_centroids[2] = {{{i[0]}, {i[1]}, {i[2]}}};\n")
+        elif (round(i[1], -2) == 1200):
+            file.write(f"final_centroids[3] = {{{i[0]}, {i[1]}, {i[2]}}};\n")
+        elif (round(i[2], -2) == 1800):
+            file.write(f"final_centroids[4] = {{{i[0]}, {i[1]}, {i[2]}}};\n")
+        elif (round(i[2], -2) == 1200):
+            file.write(f"final_centroids[5] = {{{i[0]}, {i[1]}, {i[2]}}};\n")
