@@ -25,18 +25,28 @@ Projektin päätavoitteena oli rakentaa toimiva tiedonsiirtojärjestelmä, joka
 
 ## Projektin toteutus vaiheittain
 •	Vaihe 1: Kiihtyvyysanturin integrointi ja ohjelmointi nRF5340 Development Kitillä.
+
 •	Vaihe 2: Bluetooth-yhteyden konfigurointi Raspberry Pin kanssa.
+
 •	Vaihe 3: Tietokannan suunnittelu ja yhteyden toteutus palvelimella.
+
 •	Vaihe 4: Kiihtyvyysanturin arvojen tallennus tietokantaan.
+
 •	Vaihe 5: arvojen käyttäminen koneoppimistarkoituksiin
+
 •	Vaihe 6: testaus, virheenkorjaus ja tekstitiedostojen viimeistely.
 
 ## Käytetyt Laitteet ja Teknologiat
 •	nRF5340 Development Kit (kuva 1).
+
 •	Raspberry Pi 3 (kuva 2).
+
 •	GY-61 ADXL335 Kolmiakselinen kiihtyvyysanturi (kuva 3).
+
 •	Python: Käytettiin ohjelmointikielenä sekä nRF5340:ssä että Raspberry Pi:ssä.
+
 •	MySQL: Palvelimella käytetty tietokanta kiihtyvyysarvojen tallentamiseen.
+
 •	Linux-palvelin: Toimi keskeisenä tietokantapalvelimena.
 
 
@@ -57,9 +67,13 @@ Projektin aikana opimme laajasti sekä ohjelmoinnin että järjestelmäintegraat
 
 Haasteina olivat
 •	Bluetooth-yhteyden konfigurointi eri laitteiden välillä
+
 •	anturien kalibrointi tarkkojen arvojen saamiseksi
+
 •	tietokantayhteyksien optimointi suurille datamäärille.
+
 •	koneoppimisen KMeans-algoritmin ymmärtäminen ja soveltaminen.
+
 •	tietotekniset ongelmat ja niiden ratkaisut.
 
 ## Laitteiston linkit
