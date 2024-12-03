@@ -32,7 +32,7 @@ def compute_distances(data, centroids):
 
 
 #k-means operation
-def k_means_clustering(data, initial_centroids, max_iterations=30):
+def k_means_clustering(data, initial_centroids, max_iterations=500):
     centroids = initial_centroids
     for iteration in range(max_iterations):
         distances = compute_distances(data, centroids)
