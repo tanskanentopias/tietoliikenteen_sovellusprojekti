@@ -7,6 +7,7 @@ Tietoliikenteen sovellusprojekti on osa tieto- ja viestintätekniikan insinöör
 ## Projektin arkkitehtuuri
 ![Blank document (1)](https://github.com/user-attachments/assets/f0e6158f-fa61-4aba-8872-5d509d09ca10)
 ## Saimme käytännön kokemusta seuraavista aihealueista:
+
 •	kiihtyvyysantureiden ja kehitysalustojen käyttö
 
 •	Bluetooth-tiedonsiirto ja väliasemien ohjelmointi
@@ -24,6 +25,7 @@ Projektin päätavoitteena oli rakentaa toimiva tiedonsiirtojärjestelmä, joka
 3.	tallentaa arvot MySQL-tietokantaan Linux-palvelimelle analysointia ja koneoppimista varten.
 
 ## Projektin toteutus vaiheittain
+
 •	Vaihe 1: Kiihtyvyysanturin integrointi ja ohjelmointi nRF5340 Development Kitillä.
 
 •	Vaihe 2: Bluetooth-yhteyden konfigurointi Raspberry Pin kanssa.
@@ -37,6 +39,7 @@ Projektin päätavoitteena oli rakentaa toimiva tiedonsiirtojärjestelmä, joka
 •	Vaihe 6: testaus, virheenkorjaus ja tekstitiedostojen viimeistely.
 
 ## Käytetyt Laitteet ja Teknologiat
+
 •	nRF5340 Development Kit (kuva 1).
 
 •	Raspberry Pi 3 (kuva 2).
@@ -66,6 +69,7 @@ KUVA 3. GY-61 ADXL335 3-akselinen kiihtyvyysanturi
 Projektin aikana opimme laajasti sekä ohjelmoinnin että järjestelmäintegraation käytännön soveltamista. Erityisesti Bluetooth-yhteyden vakauden varmistaminen sekä reaaliaikaisen tiedonkeruun ja tallennuksen yhteensovittaminen toivat arvokasta kokemusta. Haastavimmaksi osaksi paljastui koneoppimisen ymmärtäminen ja käyttäminen.
 
 Haasteina olivat
+
 •	Bluetooth-yhteyden konfigurointi eri laitteiden välillä
 
 •	anturien kalibrointi tarkkojen arvojen saamiseksi
