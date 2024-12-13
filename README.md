@@ -1,7 +1,4 @@
 
-
-
-
 # Tietoliikenteen sovellusprojekti
 Tietoliikenteen sovellusprojekti on osa tieto- ja viestintätekniikan insinööriopintojen 2. vuoden kurssia. Tämä projekti yhdistää laitteisto-ohjelmoinnin, tietoliikenteen ja palvelinsovellukset. Projektin tavoitteena oli kehittää järjestelmä, joka pystyy tunnistamaan kiihtyvyysanturin asennon (ylös, alas, vasen, oikea, eteen ja taakse) sen antamista arvoista ja lähettää arvot Bluetoothin yli tietokantaan.
 ## Projektin arkkitehtuuri
@@ -88,4 +85,9 @@ Haasteina olivat
 [Raspberry Pi 3](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/)
 
 ## Yhteenveto
-Tietoliikenteen sovellusprojekti oli haastava ja hyvin taitoja testaava osa lukuvuotta, mutta todella opettavainen monesta eri alueesta alallamme. Projektin tavoitteena oli saada koodaamamme ohjelma tunnistamaan kiihtyvyysanturin asento sen antamista arvoista ja lähettämään nämä arvot Bluetoothin yli ensin Raspberry Pille, josta ne lähetettiin eteenpäin Linux serverille, missä MySQL-tietokanta sijaitsee. Myöhemmin arvot otettiin käyttöön koneoppimistehtävässä. Saimme viettää monia tunteja ratkaisujen pohtimisessa sekä eri toteutustapojen ideoimisessa projektin aikana.  Pääsimme asetettuihin tavoitteisiin haasteista ja ongelmista huolimatta, ja olimme tyytyväisiä tulokseen.
+Tietoliikenteen sovellusprojekti oli haastava ja hyvin taitoja testaava osa lukuvuotta, mutta todella opettavainen monesta eri alueesta alallamme. Projektin tavoitteena oli saada koodaamamme ohjelma tunnistamaan kiihtyvyysanturin asento sen antamista arvoista ja lähettämään nämä arvot Bluetoothin yli ensin Raspberry Pille, josta ne lähetettiin eteenpäin Linux serverille, missä MySQL-tietokanta sijaitsee. Myöhemmin arvot otettiin käyttöön koneoppimistehtävässä jossa loimme confusion matrixin keskipisteiden voittaja-arvoista (KUVA 4). Saimme viettää monia tunteja ratkaisujen pohtimisessa sekä eri toteutustapojen ideoimisessa projektin aikana.  Pääsimme asetettuihin tavoitteisiin haasteista ja ongelmista huolimatta, ja olimme tyytyväisiä tulokseen.
+
+![image](https://github.com/user-attachments/assets/1eb83dd4-9b89-417c-9e5d-e381f7ba17b6)
+
+KUVA 4. KMeans confusion matrix
+
