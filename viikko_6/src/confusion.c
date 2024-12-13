@@ -25,7 +25,7 @@
     {1500,1200,1500},
     {1500,1500,1800},
     {1500,1500,1200}
-};
+};*/
 
 int measurements[6][3]={
     {1791,1505,1505},
@@ -35,7 +35,7 @@ int measurements[6][3]={
     {1487,1487,1786},
     {1518,1518,1226}
 };
-
+/*
 int CP[6][3]={
     {1,0,0},
     {2,0,0},
@@ -63,7 +63,7 @@ void printConfusionMatrix(void)
 {
     printk("Confusion matrix = \n");
     printk("   cp1 cp2 cp3 cp4 cp5 cp6\n");
-    for (int i = 0; i < 6; i++)  // Assuming 6 measurement points
+    for (int i = 0; i < 6; i++)
     {
     printk("cp%d %d   %d   %d   %d   %d   %d\n", i+1, CM[i][0], CM[i][1], CM[i][2], CM[i][3], CM[i][4], CM[i][5]);
     }
@@ -71,56 +71,27 @@ void printConfusionMatrix(void)
 
 void makeHundredFakeClassifications(void)
 {
-
+    for(int i=0; i < 6; i++)
+    {
     int closestIndex = calculateDistanceToAllCentrePointsAndSelectWinner(measurements[i][0], measurements[i][1], measurements[i][2]);
     CM[i][closestIndex]++;
-
+    }
 }
 
 void makeOneClassificationAndUpdateConfusionMatrix(int direction)
 {
-    initializeADC();
-    struct Measurement m = readADCValue();
-
     
-    direction = calculateDistanceToAllCentrePointsAndSelectWinner(m.x, m.y, m.z); 
-        switch(direction)
-        {
-            case 0:
-                CM[0][0] = CM[0][0] +1;        
-                break;
-
-            case 1:
-                CM[1][1] = CM[1][1] +1;        
-                break;
-
-            case 2:
-                CM[2][2] = CM[2][2] +1;        
-                break;
-
-            case 3:
-                CM[3][3] = CM[3][3] +1;        
-                break;
-
-            case 4:
-                CM[4][4] = CM[4][4] +1;        
-                break;
-
-            case 5:
-                CM[5][5] = CM[5][5] +1;        
-                break;
-
-            default:
-                printk("not work :'(");
-                break;
-        }
+    struct Measurement m = readADCValue();
+    int voittaja = calculateDistanceToAllCentrePointsAndSelectWinner(m.x, m.y, m.z);
+    printk("voittaja: %d\n", direction);
+    CM[direction][voittaja] = CM[direction][voittaja] + 1;
 }
+    
+
 
 int calculateDistanceToAllCentrePointsAndSelectWinner(int x,int y,int z)
 {
    
-   
-
    int closestIndex = 0; 
    float minDistance = INFINITY; 
 

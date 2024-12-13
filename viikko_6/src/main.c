@@ -92,7 +92,7 @@ static void button_changed(uint32_t button_state, uint32_t has_changed)
 			break;
 		}
 
-		struct Measurement m = readADCValue(); //tämä measurement array tilalle, kun mitataan oikeaa dataa
+		struct Measurement m = readADCValue();
 		printk("x = %d,  y = %d,  z = %d\n",m.x,m.y,m.z);
 		#endif
 	}		
